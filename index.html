@@ -1,5 +1,6 @@
-<!DOCTYPE html>
 
+<!DOCTYPE html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,16 +11,19 @@
 </head>
 
 <body>
-
+<script type="text/javascript" src="app.js"></script>
 <div class="remote">
-    <h1>TV Remote</h1>
+    <h1>TV Remote Control</h1>
     <h1>
+        <form method="POST">
+            <input type="PIN" name="yourPIN" placeholder="Enter PIN" required>
+            <input class="subscribe-button" type="submit" value="To Pair">
 
-        <button id = "pair" class="pair" >Enter PIN</button>
+        </form>
     </h1>
     <div class="remote-buttons">
         <section>
-                <button id="power" class="power">
+                <button id="power" class="power" onclick="power()">
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                          viewBox="0 0 22.1 22.1" style="enable-background:new 0 0 22.1 22.1;" xml:space="preserve">
                         <path d="M11.1,22.1C11.1,22.1,11.1,22.1,11.1,22.1c-2.7,0-5.2-1-7.1-2.9C0.1,15.2,0.1,8.9,4,5c0.4-0.4,1-0.4,1.4,0
@@ -29,7 +33,7 @@
                     </svg>
 
                 </button>
-                <button id="source" class="source">
+                <button id="source" class="source" onclick="menu()">
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="55.9" height =55.9
                          viewBox="0 0 55.9 55.9" style="enable-background:new 0 0 55.9 55.9;" xml:space="preserve">
                     <g id="XMLID_5_">
@@ -41,7 +45,7 @@
         </section>
 
         <section class="vol-section">
-            <button id="vol-up">
+            <button id="vol-up" onclick = "volUp()">
                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                          viewBox="0 0 82 82" style="enable-background:new 0 0 82 82;" xml:space="preserve">
                     <g class="st0">
@@ -55,7 +59,7 @@
                 </svg>
             </button>
 
-            <button id="vol-down">
+            <button id="vol-down" onclick = "volDown()">
                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                      viewBox="0 0 82 82" style="enable-background:new 0 0 82 82;" xml:space="preserve">
                 <g>
@@ -64,15 +68,18 @@
                 </g>
                 </svg>
             </button>
+
                 <!--Vol Slider?-->
         </section>
+    </div>
+    <div>
 
     </div>
 </div>
 
-
+<script type="text/javascript" src="app.js"></script>
 <!--<script type="javascript" src="compiled.js"></script>-->
-<script type="text/javascript" src="compiled.js"></script>
+<!--<script type="text/javascript" src="demo.js"></script>-->
 </body>
 </html>
 
